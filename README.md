@@ -1,4 +1,4 @@
-### 🚀 Projeto de Monitoramento: PedidoService (Spring Boot + Prometheus/Grafana)
+## 🚀 Projeto de Monitoramento: PedidoService (Spring Boot + Prometheus/Grafana)
 Este repositório contém a implementação completa de um sistema de monitoramento para a API PedidoService, conforme o estudo de caso, utilizando as seguintes tecnologias:
 
 Aplicação: Spring Boot 3+
@@ -23,25 +23,25 @@ Docker Desktop (Instalado e em execução)
 🛠️ Instruções de Execução (Guia para o Teste)
 Siga estes 3 passos para iniciar a aplicação, o monitoramento e visualizar o dashboard.
 
-Passo 1: Iniciar a Aplicação Spring Boot
+# Passo 1: Iniciar a Aplicação Spring Boot
 Abra o Terminal na pasta raiz do projeto.
 
 Bash
 
-# Inicia a API REST na porta 8080.
+Inicia a API REST na porta 8080.
 ./mvnw spring-boot:run
 Detalhe: Deixe este terminal rodando. A aplicação está expondo as métricas em /actuator/prometheus.
 
-Passo 2: Iniciar os Serviços de Monitoramento
+# Passo 2: Iniciar os Serviços de Monitoramento
 Abra um SEGUNDO TERMINAL e navegue até a pasta raiz do projeto.
 
 Bash
 
-# Inicia o Prometheus (porta 9090) e o Grafana (porta 3000)
+ Inicia o Prometheus (porta 9090) e o Grafana (porta 3000)
 docker-compose up
 Detalhe: O Prometheus usará o arquivo prometheus.yml para configurar a coleta e coletará os dados da aplicação no endereço host.docker.internal:8080.
 
-Passo 3: Visualizar o Dashboard (Grafana)
+# Passo 3: Visualizar o Dashboard (Grafana)
 Acesse o navegador: http://localhost:3000
 
 Faça Login: admin / admin
