@@ -1,0 +1,25 @@
+## MANUAL DE EXECUÇÃO: MONITORAMENTO COMPLETO
+
+Prezado(a) Professor(a),
+
+O projeto foi entregue com todas as configurações do Spring Boot, Micrometer, Prometheus e Grafana [cite: 1] prontas, faltando apenas a etapa de execução via Docker.
+
+Para testar o monitoramento completo, siga os passos abaixo no seu ambiente com Docker instalado:
+
+### PASSO 1: INICIAR A APLICAÇÃO (PedidoService)
+1.  Abra um Terminal (CMD ou PowerShell) na pasta raiz do projeto.
+2.  Execute o comando (o projeto irá rodar na porta 8080):
+    >>> ./mvnw spring-boot:run
+
+### PASSO 2: INICIAR O MONITORAMENTO (Prometheus e Grafana)
+1.  Abra um **SEGUNDO TERMINAL** (deixe o primeiro rodando).
+2.  Execute na pasta raiz (isso irá subir os serviços do Docker):
+    >>> docker-compose up
+
+### PASSO 3: VISUALIZAR O RESULTADO NO GRAFANA
+1.  Acesse o navegador: http://localhost:3000 
+2.  Faça login com usuário/senha: admin / admin [cite: 88]
+3.  O Prometheus já está configurado como fonte de dados[cite: 89].
+4.  Para ver os gráficos, importe o dashboard usando o ID **4701** (ou 6756)[cite: 90].
+
+Obrigado!

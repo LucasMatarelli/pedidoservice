@@ -1,0 +1,10 @@
+global:
+  [cite_start]scrape_interval: 5s # [cite: 80] (A cada 5s ele busca métricas)
+
+scrape_configs:
+  - [cite_start]job_name: 'pedido-service' # [cite: 82] (Nome do nosso job)
+    [cite_start]metrics_path: '/actuator/prometheus' # [cite: 83] (O caminho que configuramos no Spring)
+    static_configs:
+      # 'host.docker.internal' é um nome especial que deixa o Docker
+      # (Prometheus) acessar sua máquina local (onde o Spring Boot roda)
+      - [cite_start]targets: ['host.docker.internal:8080'] # [cite: 85]
