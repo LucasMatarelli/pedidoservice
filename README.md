@@ -25,13 +25,13 @@ Abra o Terminal na pasta raiz do projeto.
 ./mvnw spring-boot:run
 (Deixe este terminal rodando. A aplicação está expondo as métricas em /actuator/prometheus )
 
-Passo 2: Iniciar os Serviços de Monitoramento
+### Passo 2: Iniciar os Serviços de Monitoramento
 Abra um SEGUNDO TERMINAL e navegue até a pasta raiz do projeto.
 # Inicia o Prometheus (porta 9090) e o Grafana (porta 3000)
 docker-compose up
 (O Prometheus usará o arquivo prometheus.yml para configurar a coleta a cada 5 segundos e coletará os dados da aplicação no endereço host.docker.internal:8080 )
 
-Passo 3: Visualizar o Dashboard (Grafana)
+### Passo 3: Visualizar o Dashboard (Grafana)
 Acesse o navegador: http://localhost:3000 
 Faça Login: admin / admin 
 Visualização: A Fonte de Dados (Prometheus) deve ser configurada:
