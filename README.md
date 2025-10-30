@@ -1,4 +1,4 @@
-🚀 Projeto de Monitoramento: PedidoService (Spring Boot + Prometheus/Grafana)
+### 🚀 Projeto de Monitoramento: PedidoService (Spring Boot + Prometheus/Grafana)
 Este repositório contém a implementação completa de um sistema de monitoramento para a API PedidoService, conforme o estudo de caso, utilizando as seguintes tecnologias:
 
 Aplicação: Spring Boot 3+
